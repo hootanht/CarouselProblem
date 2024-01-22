@@ -1,0 +1,309 @@
+﻿@import '../../Styles/abstracts/_functions.scss';
+@import '../../Styles/abstracts/_media-queries.scss';
+@import "../../Styles/abstracts/_colors.scss";
+
+.set-max-width {
+    max-width: 500px;
+}
+
+.carousel-wrapper {
+    ::deep .bit-icon--ChevronRight {
+        background: url("./images/icons/chevron-right.svg") center/cover no-repeat !important;
+        color: transparent !important;
+    }
+
+    ::deep .bit-icon--ChevronLeft {
+        background: url("./images/icons/chevron-left.svg") center/cover no-repeat !important;
+        color: transparent !important;
+    }
+
+    ::deep .bit-csl-rbt {
+        outline: 0;
+        opacity: 1 !important;
+        text-decoration: none;
+        color: var(--bit-clr-act-hover-fg-pri);
+    }
+
+    ::deep .bit-csl-lbt {
+        outline: 0;
+        opacity: 1 !important;
+        text-decoration: none;
+        color: var(--bit-clr-act-hover-fg-pri);
+    }
+
+    ::deep .bit-csl-dot .current {
+        background-color: $primary-sky-night !important;
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    ::deep .bit-csl-dot {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    ::deep .bit-csl-dot div {
+        border-radius: 50% !important;
+        width: 7px !important;
+        height: 7px !important;
+        display: inline-block;
+        margin-right: 5px !important;
+        margin-left: 0px !important;
+        background-color: $primary-soap !important;
+    }
+}
+
+.adver-detail-container {
+    width: 100%;
+    background-color: $grays-cloud;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.adver-detail-header {
+    height: 50px;
+    width: 100%;
+    max-width: 502px !important;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: $grays-white;
+
+    .go-back-btn {
+        color: $primary-sky-night;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        padding-right: 22px;
+        background: url("./images/icons/adver-details/blue-back-arrow.svg") no-repeat;
+        background-position: center right;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 35px;
+        padding-left: 10px;
+    }
+
+    .radar-id {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        color: $grays-metal;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.adver-image-gallery {
+    height: 211px;
+    margin-bottom: 19px;
+    background: url("./images/icons/adver-details/placeholder-gallery-img.png") center/cover no-repeat;
+}
+
+.carouselItem-image {
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+.adver-detail-title {
+    color: $grays-black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 19px 12px 0;
+}
+
+.adver-detail-date-section {
+    color: $grays-metal;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    margin: 8px 12px 0;
+}
+
+.adver-detail-info-section {
+    padding: 20px 12px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+
+    .adver-price {
+        color: $grays-black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    .line-separator {
+        width: 100%;
+        margin: 0;
+        border: none;
+        background: $grays-card-board;
+        height: 1px;
+    }
+
+    .car-info-list {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 12px;
+        color: $grays-black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+
+        .car-info {
+            padding-right: 30px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .car-values {
+            color: $grays-black;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 22px;
+        }
+
+        .car-location {
+            background: url("./images/icons/adver-details/location-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-usage {
+            background: url("./images/icons/adver-details/carcard-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-gearbox {
+            background: url("./images/icons/adver-details/gear-box-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-shassy {
+            background: url("./images/icons/adver-details/shassy-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-fuel {
+            background: url("./images/icons/adver-details/fuel-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-moter {
+            background: url("./images/icons/adver-details/motor-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-body {
+            background: url("./images/icons/adver-details/body-icon.svg") no-repeat;
+            background-position: center right;
+        }
+
+        .car-insurance {
+            background: url("./images/icons/adver-details/insurance-icon.svg") no-repeat;
+            background-position: center right;
+        }
+    }
+
+    .adver-desc {
+        margin-bottom: 80px;
+
+        .desc-title {
+            color: $grays-metal;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+
+        .desc-content {
+            color: $grays-black;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+        }
+    }
+}
+
+.adver-footer {
+    background: $grays-white;
+    height: 66px;
+    padding: 16px 12px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .adver-phone-number {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        background: url("./images/icons/adver-details/phone-icon.svg") no-repeat;
+        background-position: center right;
+        color: $grays-black;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        padding-right: 28px;
+        text-decoration: none;
+        height: 35px;
+        padding-left: 10px;
+    }
+
+    .adver-in-vendor-btn {
+        font-family: IRANYekan;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        width: min-content;
+        white-space: nowrap;
+        height: 34px;
+        padding-left: 25px;
+        background: url("./images/icons/adver-details/blue-arrow.svg") no-repeat;
+        background-position: center left 4px;
+        background-size: 18px;
+    }
+}

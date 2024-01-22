@@ -1,0 +1,24 @@
+﻿@import '../../Styles/abstracts/_vars.scss';
+@import '../../Styles/abstracts/_functions.scss';
+@import '../../Styles/abstracts/_media-queries.scss';
+@import '../../Styles/abstracts/_bit-css-variables.scss';
+
+.app-page-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 100vh;
+    height: 100dvh;
+    flex-flow: column nowrap;
+    overflow: auto;
+    position: relative;
+
+    .app-page {
+        flex: 1 1 auto;
+        padding-top: 46px;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}

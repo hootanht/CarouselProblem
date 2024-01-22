@@ -1,0 +1,19 @@
+﻿@page "/"
+@inherits AppComponentBase
+
+<PageTitle>@Localizer[nameof(AppStrings.HomeTitle)]</PageTitle>
+
+<div class="adver-detail-container set-max-width">
+
+    <div class="carousel-wrapper">
+        <BitCarousel InfiniteScrolling="true" Direction="BitDirection.RightToLeft" Style="@(MustShowImage? "width: 100%;height: 211px;" : "display:none")">
+            @foreach (var image in Images)
+            {
+                <BitCarouselItem>
+                    <img class="image set-max-width carouselItem-image" src="@image" @onload="HandleImageOnLoaded" />
+                </BitCarouselItem>
+            }
+        </BitCarousel>
+    </div>
+
+</div>
